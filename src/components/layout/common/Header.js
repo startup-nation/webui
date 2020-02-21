@@ -3,6 +3,7 @@ import { Route, NavLink, Switch } from "react-router-dom";
 import LandingPage from "../user/LandingPage";
 import Signin from "../auth/Signin";
 import Signup from "../auth/Signup";
+import Admin from "../admin/AdminLogin";
 
 export default function Header() {
   return (
@@ -11,7 +12,7 @@ export default function Header() {
         <nav className="nav-extended indigo">
           <div className="navbar-fixed">
             <div className="nav-wrapper">
-              <a href="#" class="brand-logo">
+              <a href="#" className="brand-logo">
                 Meal
               </a>
               <a href="" className="sidenav-trigger" data-terget="mobile-nav">
@@ -44,43 +45,16 @@ export default function Header() {
                 </li>
 
                 <li>
-                  <a
-                    className="dropdown-trigger white-text text-darken-4"
-                    href=""
-                    data-target="dropdown1"
+                  <NavLink
+                    exact
+                    className="white-text text-darken-3"
+                    to="/admin"
                   >
                     <i className="material-icons left white-text text-darken-2">
-                      arrow_drop_down
+                      accessibility
                     </i>
-                    Join
-                  </a>
-
-                  <ul id="dropdown1" className="dropdown-content">
-                    <li>
-                      <NavLink
-                        exact
-                        className="grey-text text-darken-3"
-                        to="/auth/singin"
-                      >
-                        <i className="material-icons cyan-text text-darken-3">
-                          accessibility_new
-                        </i>
-                        Signin
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        exact
-                        className="grey-text text-darken-3"
-                        to="/auth/signup"
-                      >
-                        <i className="material-icons cyan-text text-darken-3">
-                          accessibility_new
-                        </i>
-                        Signup
-                      </NavLink>
-                    </li>
-                  </ul>
+                    Admin
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -113,8 +87,6 @@ export default function Header() {
 
       <Switch>
         <Route exact path="/" component={LandingPage} />
-        <Route exact path="/signin" component={Signin} />
-        <Route exact path="/signup" component={Signup} />
       </Switch>
     </div>
   );

@@ -1,9 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
+import Header from '../common/Header';
 export default function Signin() {
   return (
     <div className="contents">
+      <Header/>
       <form action="">
         <div className="container">
           <div className="row">
