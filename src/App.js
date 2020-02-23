@@ -8,6 +8,7 @@ import Signin from "./components/layout/auth/Signin";
 import Signup from "./components/layout/auth/Signup";
 import Restaurants from "./components/layout/common/Restaurants";
 import Food from "./components/layout/common/Food";
+import ResRegistration from "./components/layout/restaurant/ResRegistration";
 function App() {
   return (
     <div className="App">
@@ -20,6 +21,9 @@ function App() {
       <Route exact path="/restaurants" component={Restaurants} />
       
       <Route exact path="/admin/dashboard" component={AdminDashboard} />
+      <Route exact path="/restaurant/registration" component={ResRegistration} />
+
+
     </div>
   );
 }

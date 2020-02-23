@@ -235,6 +235,7 @@ export default function LandingPage() {
               </div>
             </div>
           </div>
+          <NavLink exact to="/restaurant/registration">
           <div className="col s12 l6">
             <div className="card hoverable ">
               <div className="card-image waves-effect waves-block waves-light">
@@ -255,6 +256,7 @@ export default function LandingPage() {
               </div>
             </div>
           </div>
+          </NavLink>
         </div>
       </div>
       <br />
