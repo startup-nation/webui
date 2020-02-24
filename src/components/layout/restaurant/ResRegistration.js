@@ -119,7 +119,7 @@ export default function ResRegistration() {
                   <div className="row">
                     <div className="center-align">
                       <NavLink
-                        to="/"
+                        to="/Restaurant/RestaurantSignin"
                         className="waves-effect waves-light btn indigo"
                       >
                         Signup
@@ -129,7 +129,7 @@ export default function ResRegistration() {
                       <br />
                       <span className="clink">
                         Already have an account&nbsp;{" "}
-                        <NavLink exact to="/signin">
+                        <NavLink exact to="/Restaurant/RestaurantSignin">
                           Signin
                         </NavLink>
                       </span>

@@ -9,6 +9,8 @@ import Signup from "./components/layout/auth/Signup";
 import Restaurants from "./components/layout/common/Restaurants";
 import Food from "./components/layout/common/Food";
 import ResRegistration from "./components/layout/restaurant/ResRegistration";
+import RestaurantDashboard from "./components/layout/restaurant/RestaurantDashboard";
+import RestaurantSignin from "./components/layout/restaurant/RestaurantSignin";
 function App() {
   return (
     <div className="App">
@@ -22,6 +24,8 @@ function App() {
       
       <Route exact path="/admin/dashboard" component={AdminDashboard} />
       <Route exact path="/restaurant/registration" component={ResRegistration} />
+      <Route exact path="/restaurant/RestaurantDashboard" component={RestaurantDashboard} />
+      <Route exact path="/restaurant/RestaurantSignin" component={RestaurantSignin} />
 
 
     </div>
