@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <div>
       <header>
-        <nav className="nav-extended indigo">
+        <nav className="nav-extended indigo darken-3">
           <div className="navbar-fixed">
             <div className="nav-wrapper">
               <a href="#" className="brand-logo">

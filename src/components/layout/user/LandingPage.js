@@ -14,7 +14,7 @@ import breakfast from '../../img/breakfast.jpg';
 import lunch from '../../img/lunch.jpg';
 import dinner from '../../img/dinner.jpg';
 import Restaurants from "../common/Restaurants";
-
+import Footer from '../common/Footer';
 export default function LandingPage() {
   return (
     <div className="row">
@@ -293,6 +293,7 @@ export default function LandingPage() {
       <Switch>
         <Route exact path="/restaurants" component={Restaurants} />
       </Switch>
+      <Footer/>
     </div>
   );
 }
