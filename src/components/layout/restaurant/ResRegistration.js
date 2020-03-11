@@ -58,17 +58,7 @@ export default function ResRegistration() {
                       <label htmlFor="password">Password</label>
                     </div>
                   </div>
-                  <div className="row">
-                    <div className="input-field col s12 l12">
-                      <input
-                        id="name"
-                        type="text"
-                        className="validate"
-                        required
-                      />
-                      <label htmlFor="name">Role</label>
-                    </div>
-                  </div>
+              
                 </div>
                 <div  className="col s12 l6" id="info-input-field" >
                

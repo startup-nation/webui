@@ -55,7 +55,14 @@ export default function Signin() {
                         <NavLink exact to="/signup" className="waves-effect btn waves-light indigo">
                           Login with Facebook
                         </NavLink>
-                      </span><br/>
+                      </span><br/><br/>
+                      <span className="clink">
+                        Forgot Password!!!&nbsp;{" "}
+                        <NavLink exact to="/signin">
+                          click here
+                        </NavLink>
+                      </span>
+                      <br/>
                       <span className="clink">
                         Create an account&nbsp;{" "}
                         <NavLink exact to="/signup">

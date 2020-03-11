@@ -4,7 +4,7 @@ import LandingPage from "../user/LandingPage";
 import Signin from "../auth/Signin";
 import Signup from "../auth/Signup";
 import Admin from "../admin/AdminLogin";
-
+import $ from "jquery";
 export default function Header() {
   return (
     <div>
