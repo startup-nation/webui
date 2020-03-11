@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Route, NavLink, Switch } from "react-router-dom";
 import image1 from "../../img/imageone.jpg";
 import image2 from "../../img/2.jpg";
+import offer from "../../img/offer.jpg";
 import image3 from "../../img/3.jpg";
 import image4 from "../../img/4.jpg";
 import image5 from "../../img/5.jpg";
@@ -27,47 +28,42 @@ export default class LandingPage extends Component {
   render() {
     return (
       <div className="row">
-          <div class="slider">
-            <ul class="slides">
-              <li>
-              <img  src={image1} />
-                <div class="caption center-align">
-                  <h3>Book Your Meal</h3>
-                  <h5 class="light grey-text text-lighten-3">
-                    best in town
-                  </h5>
-                </div>
-              </li>
-              <li>
-              <img  src={image2} />
-                <div class="caption left-align">
-                  <h3>With a Few Minutes</h3>
-                  <h5 class="light grey-text text-lighten-3">
-                    get your food
-                  </h5>
-                </div>
-              </li>
-              <li>
-              <img  src={image5} />
-                <div class="caption right-align">
-                  <h3>In Restaurant</h3>
-                  <h5 class="light grey-text text-lighten-3">
-                    choose your best place
-                  </h5>
-                </div>
-              </li>
-              <li>
-              <img  src={image4} />
-                <div class="caption center-align">
-                  <h3>Spend Your Time</h3>
-                  <h5 class="light grey-text text-lighten-3">
-                    with favourite food
-                  </h5>
-                </div>
-              </li>
-            </ul>
-          </div>
-       
+        <div class="slider">
+          <ul class="slides">
+            <li>
+              <img src={image1} />
+              <div class="caption center-align">
+                <h3>Book Your Meal</h3>
+                <h5 class="light grey-text text-lighten-3">best in town</h5>
+              </div>
+            </li>
+            <li>
+              <img src={image2} />
+              <div class="caption left-align">
+                <h3>With a Few Minutes</h3>
+                <h5 class="light grey-text text-lighten-3">get your food</h5>
+              </div>
+            </li>
+            <li>
+              <img src={image5} />
+              <div class="caption right-align">
+                <h3>In Restaurant</h3>
+                <h5 class="light grey-text text-lighten-3">
+                  choose your best place
+                </h5>
+              </div>
+            </li>
+            <li>
+              <img src={image4} />
+              <div class="caption center-align">
+                <h3>Spend Your Time</h3>
+                <h5 class="light grey-text text-lighten-3">
+                  with favourite food
+                </h5>
+              </div>
+            </li>
+          </ul>
+        </div>
 
         <br />
         <div className="row section">
@@ -289,7 +285,7 @@ export default class LandingPage extends Component {
                 <div className="card-image waves-effect waves-block waves-light">
                   <img
                     width="50"
-                    height="200"
+                    height="250"
                     className="activator"
                     src={image3}
                   />
@@ -313,7 +309,7 @@ export default class LandingPage extends Component {
                   <div className="card-image waves-effect waves-block waves-light">
                     <img
                       width="50"
-                      height="200"
+                      height="250"
                       className="activator"
                       src={image2}
                     />
@@ -366,6 +362,42 @@ export default class LandingPage extends Component {
             </div>
           </div>
         </div>
+        <br />
+
+        <div className="contents container">
+          <div className="row">
+            <div className="col s12 l12 card hoverable">
+              <div className="col s12 l4">
+                <div className="card-image waves-effect waves-block waves-light">
+                  <img
+                    width="300"
+                    height="250"
+                    className="activator"
+                    src={offer}
+                  />
+                </div>
+              </div>
+              <div className="col s12 l6">
+                <div className="card-content">
+                <br/><br/><br/>
+                  <span className="card-title activator grey-text text-darken-4">
+                    <div class="input-field col s12">
+                      <input
+                        id="first_name"
+                        type="text"
+                        class="validate"
+                      />
+                      <label for="first_name">enter your email</label>
+                      <br/><br/>
+                      <a class="waves-effect waves-light btn">subscribe</a>
+                    </div>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <Switch>
           <Route exact path="/restaurants" component={Restaurants} />
         </Switch>
