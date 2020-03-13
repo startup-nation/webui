@@ -28,36 +28,36 @@ export default class LandingPage extends Component {
   render() {
     return (
       <div className="row">
-        <div class="slider">
-          <ul class="slides">
+        <div className="slider">
+          <ul className="slides">
             <li>
               <img src={image1} />
-              <div class="caption center-align">
+              <div className="caption center-align">
                 <h3>Book Your Meal</h3>
-                <h5 class="light grey-text text-lighten-3">best in town</h5>
+                <h5 className="light grey-text text-lighten-3">best in town</h5>
               </div>
             </li>
             <li>
               <img src={image2} />
-              <div class="caption left-align">
+              <div className="caption left-align">
                 <h3>With a Few Minutes</h3>
-                <h5 class="light grey-text text-lighten-3">get your food</h5>
+                <h5 className="light grey-text text-lighten-3">get your food</h5>
               </div>
             </li>
             <li>
               <img src={image5} />
-              <div class="caption right-align">
+              <div className="caption right-align">
                 <h3>In Restaurant</h3>
-                <h5 class="light grey-text text-lighten-3">
+                <h5 className="light grey-text text-lighten-3">
                   choose your best place
                 </h5>
               </div>
             </li>
             <li>
               <img src={image4} />
-              <div class="caption center-align">
+              <div className="caption center-align">
                 <h3>Spend Your Time</h3>
-                <h5 class="light grey-text text-lighten-3">
+                <h5 className="light grey-text text-lighten-3">
                   with favourite food
                 </h5>
               </div>
@@ -381,15 +381,15 @@ export default class LandingPage extends Component {
                 <div className="card-content">
                 <br/><br/><br/>
                   <span className="card-title activator grey-text text-darken-4">
-                    <div class="input-field col s12">
+                    <div className="input-field col s12">
                       <input
                         id="first_name"
                         type="text"
-                        class="validate"
+                        className="validate"
                       />
-                      <label for="first_name">enter your email</label>
+                      <label htmlFor="first_name">enter your email</label>
                       <br/><br/>
-                      <a class="waves-effect waves-light btn">subscribe</a>
+                      <a className="waves-effect waves-light btn">subscribe</a>
                     </div>
                   </span>
                 </div>

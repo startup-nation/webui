@@ -11,6 +11,7 @@ import Food from "./components/layout/common/Food";
 import ResRegistration from "./components/layout/restaurant/ResRegistration";
 import RestaurantDashboard from "./components/layout/restaurant/RestaurantDashboard";
 import RestaurantSignin from "./components/layout/restaurant/RestaurantSignin";
+import UserProfile from "./components/layout/user/UserProfile";
 function App() {
   return (
     <div className="App">
@@ -18,7 +19,7 @@ function App() {
       <Route exact path="/admin" component={AdminLogin} />
       <Route exact path="/signin" component={Signin} />
       <Route exact path="/signup" component={Signup} />
-
+      <Route exact path="/userProfile" component={UserProfile} />
       <Route exact path="/restaurants/food" component={Food} />
       <Route exact path="/restaurants" component={Restaurants} />
       

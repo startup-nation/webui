@@ -1,11 +1,41 @@
-import React from "react";
+import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import Header from '../common/Header';
-export default function Signin() {
+import axios from 'axios';
+ class Signin extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+        email: '',
+        password: ''
+    }
+  }
+
+  changeHandler = e => {
+		this.setState({ [e.target.name]: e.target.value })
+    }
+    submitHandler = e => {
+		e.preventDefault()
+		console.log(this.state)
+		axios
+			.post('https://bookmymealapiaplha.herokuapp.com/api/User/Login', this.state)
+			.then(response => {
+				console.log(response)
+			})
+			.catch(error => {
+				console.log(error)
+			})
+    }
+
+
+  render() {
+  const { email, password } = this.state  
+
   return (
     <div className="contents">
       <Header/>
-      <form action="">
+      <form onSubmit={this.submitHandler}>
         <div className="container">
           <div className="row">
             <div className="center-align">
@@ -20,7 +50,10 @@ export default function Signin() {
                       <input
                         id="email"
                         type="email"
-                        className="validate"
+                        name="email"
+                        value={email}
+                        onChange={this.changeHandler}
+                        className="form-control"
                         required
                       />
                       <label htmlFor="email">Email</label>
@@ -31,6 +64,9 @@ export default function Signin() {
                       <input
                         id="password"
                         type="password"
+                        name="password"
+                        value={password}
+                        onChange={this.changeHandler}
                         className="validate"
                         required
                       />
@@ -39,13 +75,13 @@ export default function Signin() {
                   </div>
                   <div className="row">
                     <div className="center-align">
-                      <NavLink
-                        to="/"
+                      <NavLink onClick={this.submitHandler}
+                        to="/userProfile"
                         className="waves-effect btn waves-light indigo"
                         
                       >
                         Login
-                        <i class="material-icons right">send</i>
+                        <i className="material-icons right">send</i>
 
                       </NavLink>
                       <br />
@@ -80,3 +116,5 @@ export default function Signin() {
     </div>
   );
 }
+ }
+export default Signin;
