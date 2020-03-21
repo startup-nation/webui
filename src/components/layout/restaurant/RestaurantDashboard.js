@@ -3,7 +3,32 @@ import { NavLink } from "react-router-dom";
 
 export default function RestaurantDashboard() {
   return (
+    
     <div className="row">
+           <header>
+        <nav className="red darken-3 z-depth-1" role="navigation">
+          <div className="nav-wrapper">
+            <ul className="right hide-on-med-and-down">
+              <li>
+                <a href="" className="toggle-fullscreen">
+                  <i className="material-icons">account_circle</i>
+                </a>
+              </li>
+            </ul>
+            <a
+              data-activates="slide-out"
+              className="button-collapse show-on-"
+              href="#!"
+            >
+              <i className="material-icons">menu</i>
+            </a>
+            <a href="#" data-activates="slide-out" className="button-collapse">
+              <i className="mdi-navigation-menu"></i>
+            </a>
+          </div>
+        </nav>
+      </header>
+      <div className="col s6 l2"> 
       <ul id="slide-out" className="side-nav fixed z-depth-2">
         <li className="center no-padding">
           <div
@@ -91,31 +116,9 @@ export default function RestaurantDashboard() {
         </ul>
       </ul>
 
-      <header>
-        <nav className="red darken-3 z-depth-1" role="navigation">
-          <div className="nav-wrapper">
-            <ul className="right hide-on-med-and-down">
-              <li>
-                <a href="" className="toggle-fullscreen">
-                  <i className="material-icons">account_circle</i>
-                </a>
-              </li>
-            </ul>
-            <a
-              data-activates="slide-out"
-              className="button-collapse show-on-"
-              href="#!"
-            >
-              <i className="material-icons">menu</i>
-            </a>
-            <a href="#" data-activates="slide-out" className="button-collapse">
-              <i className="mdi-navigation-menu"></i>
-            </a>
-          </div>
-        </nav>
-      </header>
-
-      <div className="row" style={{ padding: "10px" }}>
+ 
+</div>
+      <div className="col s12 l10" style={{ padding: "10px" }}>
 
 
         <div className="col s12 l4">

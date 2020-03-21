@@ -11,6 +11,29 @@ export default class RestaurantFood extends Component {
 render() {
   return (
     <div className="row">
+             <header>
+        <nav className="red darken-3 z-depth-1" role="navigation">
+          <div className="nav-wrapper">
+            <ul className="right hide-on-med-and-down">
+              <li>
+                <a href="" className="toggle-fullscreen">
+                  <i className="material-icons">account_circle</i>
+                </a>
+              </li>
+            </ul>
+            <a
+              data-activates="slide-out"
+              className="button-collapse show-on-"
+              href="#!"
+            >
+              <i className="material-icons">menu</i>
+            </a>
+            <a href="#" data-activates="slide-out" className="button-collapse">
+              <i className="mdi-navigation-menu"></i>
+            </a>
+          </div>
+        </nav>
+      </header>
         <div className="col s6 l2"> 
       <ul id="slide-out" className="side-nav fixed z-depth-2">
         <li className="center no-padding">
@@ -164,68 +187,68 @@ render() {
    
       </div>
 
-      <div id="modaladd" class="modal">
-            <div class="modal-content">
+      <div id="modaladd" className="modal">
+            <div className="modal-content">
               
               <p>book table at "restaurant name"</p>
               <p>Add Food</p>
               <div className="row">
-                <div class="input-field col s6">
-                  <input id="food_name" type="text" class="validate" />
-                  <label for="food_name">Food Name</label>
+                <div className="input-field col s6">
+                  <input id="food_name" type="text" className="validate" />
+                  <label htmlFor="food_name">Food Name</label>
                 </div>
-                <div class="input-field col s6">
-                  <input type="text" class="validate" />
-                  <label for="food_price">Food Price</label>
+                <div className="input-field col s6">
+                  <input type="text" className="validate" />
+                  <label htmlFor="food_price">Food Price</label>
                 </div>
-                <div class="input-field col s6">
-                  <input type="text" class="validate" />
-                  <label for="food_type">Food Type</label>
+                <div className="input-field col s6">
+                  <input type="text" className="validate" />
+                  <label htmlFor="food_type">Food Type</label>
                 </div>
-                <div class="input-field col s6">
-                  <input type="text" class="validate" />
-                  <label for="foord_description">Food Description</label>
+                <div className="input-field col s6">
+                  <input type="text" className="validate" />
+                  <label htmlFor="foord_description">Food Description</label>
                 </div>
               </div>
             </div>
-            <div class="modal-footer">
+            <div className="modal-footer">
               <a
                 href="#!"
-                class="modal-close waves-effect waves-green btn-flat"
+                className="modal-close waves-effect waves-green btn-flat"
               >
                 Add
               </a>
             </div>
           </div>
 
-          <div id="modaledit" class="modal">
-            <div class="modal-content">
+          <div id="modaledit" className="modal">
+            <div className="modal-content">
               
               <p>book table at "restaurant name"</p>
               <p>Edit Food</p>
               <div className="row">
-                <div class="input-field col s6">
-                  <input id="food_name" type="text" class="validate" />
-                  <label for="food_name">Food Name</label>
+                <div className="input-field col s6">
+                  <input id="food_name" type="text" className="validate" />
+                  <label htmlFor="food_name">Food Name</label>
                 </div>
-                <div class="input-field col s6">
-                  <input type="text" class="validate" />
-                  <label for="food_price">Food Price</label>
+                <div className="input-field col s6">
+                  <input type="text" className="validate" />
+                  <label htmlFor="food_price">Food Price</label>
                 </div>
-                <div class="input-field col s6">
-                  <input type="text" class="validate" />
-                  <label for="food_type">Food Type</label>
+                <div className="input-field col s6">
+                  <input type="text" className="validate" />
+                  <label htmlFor="food_type">Food Type</label>
                 </div>
-                <div class="input-field col s6">
-                  <input type="text" class="validate" />
-                  <label for="foord_description">Food Description</label>
+                <div className="input-field col s6">
+                  <input type="text" className="validate" />
+                  <label htmlFor="foord_description">Food Description</label>
                 </div>
               </div>
             </div>
-            <div class="modal-footer">
+            <div className="modal-footer">
               <a
                 href="#!"
-                class="modal-close waves-effect waves-green btn-flat"
+                className="modal-close waves-effect waves-green btn-flat"
               >
                 Update
               </a>
@@ -233,15 +256,15 @@ render() {
           </div>
 
 
-          <div id="modaldelete" class="modal">
-            <div class="modal-content">
+          <div id="modaldelete" className="modal">
+            <div className="modal-content">
               <h5>delete this??</h5>
              
             </div>
-            <div class="modal-footer">
+            <div className="modal-footer">
               <a
                 href="#!"
-                class="modal-close waves-effect waves-green btn-flat"
+                className="modal-close waves-effect waves-green btn-flat"
               >
                 Yes
               </a>
