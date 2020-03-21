@@ -1,7 +1,14 @@
-import React from "react";
+import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-
-export default function RestaurantFood() {
+import M from "materialize-css";
+export default class RestaurantFood extends Component {
+    componentDidMount() {
+        document.addEventListener("DOMContentLoaded", function() {
+          var elems = document.querySelectorAll(".modal");
+          var instances = M.Modal.init(elems, {});
+        });
+    }
+render() {
   return (
     <div className="row">
         <div className="col s6 l2"> 
@@ -90,17 +97,20 @@ export default function RestaurantFood() {
           </li>
         </ul>
       </ul>
-
  </div>
 
-      <div className="col s12 l10">
+
+      <div className="col s12 l10" style={{paddingTop:10}}>
+      <a className="center-align waves-effect waves-light btn indigo modal-trigger" href="#modal2" >
+            Add Food
+        </a>
       <table>
         <thead>
           <tr>
               <th>Food Name</th>
               <th>Item Name</th>
               <th>Item Price</th>
-              
+              <th>Action</th>
           </tr>
         </thead>
 
@@ -109,37 +119,85 @@ export default function RestaurantFood() {
             <td>Alvin</td>
             <td>Eclair</td>
             <td>$0.87</td>
+            <td>
+                  {" "}
+                  <a className="btn-floating btn-small waves-effect waves-light red">
+                    <i className="material-icons">clear</i>
+                  </a>{" "}
+                  <a className="btn-floating btn-small waves-effect waves-light amber accent-4">
+                    <i className="material-icons">edit</i>
+                  </a>
+            </td>
           </tr>
           <tr>
             <td>Alan</td>
             <td>Jellybean</td>
             <td>$3.76</td>
+            <td>
+                  {" "}
+                  <a className="btn-floating btn-small waves-effect waves-light red">
+                    <i className="material-icons">clear</i>
+                  </a>{" "}
+                  <a className="btn-floating btn-small waves-effect waves-light amber accent-4">
+                    <i className="material-icons">edit</i>
+                  </a>
+            </td>
           </tr>
           <tr>
             <td>Jonathan</td>
             <td>Lollipop</td>
             <td>$7.00</td>
+            <td>
+                  {" "}
+                  <a className="btn-floating btn-small waves-effect waves-light red">
+                    <i className="material-icons">clear</i>
+                  </a>{" "}
+                  <a className="btn-floating btn-small waves-effect waves-light amber accent-4">
+                    <i className="material-icons">edit</i>
+                  </a>
+            </td>
           </tr>
-          <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
-          </tr>
-          <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>
-            <td>$3.76</td>
-          </tr>
-          <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-            <td>$7.00</td>
-          </tr>
+          
         </tbody>
       </table>
 
-
+   
       </div>
+
+      <div id="modal2" class="modal">
+            <div class="modal-content">
+              
+              <p>book table at "restaurant name"</p>
+              <p>Add Food</p>
+              <div className="row">
+                <div class="input-field col s6">
+                  <input id="food_name" type="text" class="validate" />
+                  <label for="food_name">Food Name</label>
+                </div>
+                <div class="input-field col s6">
+                  <input type="text" class="validate" />
+                  <label for="food_price">Food Price</label>
+                </div>
+                <div class="input-field col s6">
+                  <input type="text" class="validate" />
+                  <label for="food_type">Food Type</label>
+                </div>
+                <div class="input-field col s6">
+                  <input type="text" class="validate" />
+                  <label for="foord_description">Food Description</label>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a
+                href="#!"
+                class="modal-close waves-effect waves-green btn-flat"
+              >
+                Add
+              </a>
+            </div>
+          </div>
+
       {/* <footer
         id="index-footer-box"
         className="page-footer  footer-fixed red darken-3"
@@ -159,3 +217,4 @@ export default function RestaurantFood() {
     </div>
   );
 }
+    }
