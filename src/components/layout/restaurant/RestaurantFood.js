@@ -1,9 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-export default function RestaurantDashboard() {
+export default function RestaurantFood() {
   return (
     <div className="row">
+        <div className="col s6 l2"> 
       <ul id="slide-out" className="side-nav fixed z-depth-2">
         <li className="center no-padding">
           <div
@@ -20,8 +21,8 @@ export default function RestaurantDashboard() {
             </div>
           </div>
         </li>
-
-        <li id="dash_dashboard" className=" red lighten-5">
+        <NavLink to="/Restaurant/RestaurantDashboard">
+        <li id="dash_dashboard" className="red lighten-5">
           <a className="waves-effect" href="">
             <i className="material-icons" style={{ padding: "20px" }}>
               dashboard
@@ -29,6 +30,7 @@ export default function RestaurantDashboard() {
             <b>Dashboard</b>
           </a>
         </li>
+        </NavLink>
         <li id="dash_dashboard">
           <a className="waves-effect" href="">
             <i className="material-icons" style={{ padding: "20px" }}>
@@ -37,7 +39,6 @@ export default function RestaurantDashboard() {
             <b>Table</b>
           </a>
         </li>
-        <NavLink to="/Restaurant/RestaurantFood">
         <li id="dash_dashboard">
           <a className="waves-effect" href="">
             <i className="material-icons" style={{ padding: "20px" }}>
@@ -46,7 +47,6 @@ export default function RestaurantDashboard() {
             <b>Food</b>
           </a>
         </li>
-        </NavLink>
         <li id="dash_dashboard">
           <a className="waves-effect" href="">
             <i className="material-icons" style={{ padding: "20px" }}>
@@ -91,63 +91,54 @@ export default function RestaurantDashboard() {
         </ul>
       </ul>
 
-      <header>
-        <nav className="red darken-3 z-depth-1" role="navigation">
-          <div className="nav-wrapper">
-            <ul className="right hide-on-med-and-down">
-              <li>
-                <a href="" className="toggle-fullscreen">
-                  <i className="material-icons">account_circle</i>
-                </a>
-              </li>
-            </ul>
-            <a
-              data-activates="slide-out"
-              className="button-collapse show-on-"
-              href="#!"
-            >
-              <i className="material-icons">menu</i>
-            </a>
-            <a href="#" data-activates="slide-out" className="button-collapse">
-              <i className="mdi-navigation-menu"></i>
-            </a>
-          </div>
-        </nav>
-      </header>
+ </div>
 
-      <div className="row" style={{ padding: "10px" }}>
+      <div className="col s12 l10">
+      <table>
+        <thead>
+          <tr>
+              <th>Food Name</th>
+              <th>Item Name</th>
+              <th>Item Price</th>
+              
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Alvin</td>
+            <td>Eclair</td>
+            <td>$0.87</td>
+          </tr>
+          <tr>
+            <td>Alan</td>
+            <td>Jellybean</td>
+            <td>$3.76</td>
+          </tr>
+          <tr>
+            <td>Jonathan</td>
+            <td>Lollipop</td>
+            <td>$7.00</td>
+          </tr>
+          <tr>
+            <td>Alvin</td>
+            <td>Eclair</td>
+            <td>$0.87</td>
+          </tr>
+          <tr>
+            <td>Alan</td>
+            <td>Jellybean</td>
+            <td>$3.76</td>
+          </tr>
+          <tr>
+            <td>Jonathan</td>
+            <td>Lollipop</td>
+            <td>$7.00</td>
+          </tr>
+        </tbody>
+      </table>
 
 
-        <div className="col s12 l4">
-          <div className="card hoverable gradient-45deg-purple-deep-orange gradient-shadow">
-            <div className="card-content">
-              <span className="center-align indigo-text">
-                <b>Today's Customer</b>
-              </span>
-              <h2 className="center-align indigo-text">75</h2>
-            </div>
-          </div>
-        </div>
-
-
-
-        <div className="col s12 l4">
-          <div className="card hoverable gradient-45deg-purple-deep-orange gradient-shadow">
-            <div className="card-content">
-              <span className="center-align indigo-text"><b>Today's Sale</b></span>
-              <h2 className="center-align indigo-text">250000</h2>
-            </div>
-          </div>
-        </div>
-
-        <div className="col s12 l4">
-          <div className="card hoverable gradient-45deg-purple-deep-orange gradient-shadow">
-            <div className="card-content">
-              <span className="center-align indigo-text"><b>Total Profit</b></span>
-              <h2 className="center-align indigo-text">50000</h2>
-            </div>
-          </div>
-        </div>
       </div>
       {/* <footer
         id="index-footer-box"

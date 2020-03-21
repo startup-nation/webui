@@ -12,6 +12,7 @@ import ResRegistration from "./components/layout/restaurant/ResRegistration";
 import RestaurantDashboard from "./components/layout/restaurant/RestaurantDashboard";
 import RestaurantSignin from "./components/layout/restaurant/RestaurantSignin";
 import UserProfile from "./components/layout/user/UserProfile";
+import RestaurantFood from "./components/layout/restaurant/RestaurantFood";
 function App() {
   return (
     <div className="App">
@@ -24,9 +25,11 @@ function App() {
       <Route exact path="/restaurants" component={Restaurants} />
       
       <Route exact path="/admin/dashboard" component={AdminDashboard} />
+      <Route exact path="/restaurant/RestaurantSignin" component={RestaurantSignin} />
       <Route exact path="/restaurant/registration" component={ResRegistration} />
       <Route exact path="/restaurant/RestaurantDashboard" component={RestaurantDashboard} />
-      <Route exact path="/restaurant/RestaurantSignin" component={RestaurantSignin} />
+      <Route exact path="/restaurant/RestaurantFood" component={RestaurantFood} />
+     
 
 
     </div>
