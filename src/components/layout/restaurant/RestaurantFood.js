@@ -73,7 +73,7 @@ export default class RestaurantFood extends Component {
                 <b>Table</b>
               </a>
             </li>
-            <li id="dash_dashboard">
+            <li id="dash_dashboard" className="active red lighten-5">
               <a className="waves-effect" href="">
                 <i className="material-icons" style={{ padding: "20px" }}>
                   account_box
