@@ -101,7 +101,7 @@ render() {
 
 
       <div className="col s12 l10" style={{paddingTop:10}}>
-      <a className="center-align waves-effect waves-light btn indigo modal-trigger" href="#modal2" >
+      <a className="center-align waves-effect waves-light btn indigo modal-trigger" href="#modaladd" >
             Add Food
         </a>
       <table>
@@ -121,10 +121,10 @@ render() {
             <td>$0.87</td>
             <td>
                   {" "}
-                  <a className="btn-floating btn-small waves-effect waves-light red">
-                    <i className="material-icons">clear</i>
+                  <a className="btn-floating btn-small waves-effect waves-light red modal-trigger" href="#modaldelete">
+                    <i className="material-icons">delete_forever</i>
                   </a>{" "}
-                  <a className="btn-floating btn-small waves-effect waves-light amber accent-4">
+                  <a className="btn-floating btn-small waves-effect waves-light amber accent-4 modal-trigger" href="#modaledit">
                     <i className="material-icons">edit</i>
                   </a>
             </td>
@@ -136,7 +136,7 @@ render() {
             <td>
                   {" "}
                   <a className="btn-floating btn-small waves-effect waves-light red">
-                    <i className="material-icons">clear</i>
+                    <i className="material-icons">delete_forever</i>
                   </a>{" "}
                   <a className="btn-floating btn-small waves-effect waves-light amber accent-4">
                     <i className="material-icons">edit</i>
@@ -150,7 +150,7 @@ render() {
             <td>
                   {" "}
                   <a className="btn-floating btn-small waves-effect waves-light red">
-                    <i className="material-icons">clear</i>
+                    <i className="material-icons">delete_forever</i>
                   </a>{" "}
                   <a className="btn-floating btn-small waves-effect waves-light amber accent-4">
                     <i className="material-icons">edit</i>
@@ -164,7 +164,7 @@ render() {
    
       </div>
 
-      <div id="modal2" class="modal">
+      <div id="modaladd" class="modal">
             <div class="modal-content">
               
               <p>book table at "restaurant name"</p>
@@ -198,6 +198,55 @@ render() {
             </div>
           </div>
 
+          <div id="modaledit" class="modal">
+            <div class="modal-content">
+              
+              <p>book table at "restaurant name"</p>
+              <p>Edit Food</p>
+              <div className="row">
+                <div class="input-field col s6">
+                  <input id="food_name" type="text" class="validate" />
+                  <label for="food_name">Food Name</label>
+                </div>
+                <div class="input-field col s6">
+                  <input type="text" class="validate" />
+                  <label for="food_price">Food Price</label>
+                </div>
+                <div class="input-field col s6">
+                  <input type="text" class="validate" />
+                  <label for="food_type">Food Type</label>
+                </div>
+                <div class="input-field col s6">
+                  <input type="text" class="validate" />
+                  <label for="foord_description">Food Description</label>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a
+                href="#!"
+                class="modal-close waves-effect waves-green btn-flat"
+              >
+                Update
+              </a>
+            </div>
+          </div>
+
+
+          <div id="modaldelete" class="modal">
+            <div class="modal-content">
+              <h5>delete this??</h5>
+             
+            </div>
+            <div class="modal-footer">
+              <a
+                href="#!"
+                class="modal-close waves-effect waves-green btn-flat"
+              >
+                Yes
+              </a>
+            </div>
+          </div>
       {/* <footer
         id="index-footer-box"
         className="page-footer  footer-fixed red darken-3"
