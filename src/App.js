@@ -15,6 +15,7 @@ import UserProfile from "./components/layout/user/UserProfile";
 import RestaurantFood from "./components/layout/restaurant/RestaurantFood";
 import RestaurantList from "./components/layout/admin/RestaurantList";
 import UserList from "./components/layout/admin/UserList";
+import OrderHistory from "./components/layout/restaurant/OrderHistory";
 function App() {
   return (
     <div className="App">
@@ -34,6 +35,7 @@ function App() {
       <Route exact path="/restaurant/registration" component={ResRegistration} />
       <Route exact path="/restaurant/RestaurantDashboard" component={RestaurantDashboard} />
       <Route exact path="/restaurant/RestaurantFood" component={RestaurantFood} />
+      <Route exact path="/restaurant/orderHistory" component={OrderHistory} />
      
 
 

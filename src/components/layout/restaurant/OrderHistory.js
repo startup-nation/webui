@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import M from "materialize-css";
-export default class RestaurantFood extends Component {
+export default class OrderHistory extends Component {
   componentDidMount() {
     document.addEventListener("DOMContentLoaded", function() {
       var elems = document.querySelectorAll(".modal");
@@ -67,18 +67,20 @@ export default class RestaurantFood extends Component {
                 <b>Table</b>
               </a>
             </li>
-            <li id="dash_dashboard" className="active red lighten-5">
+            <NavLink to="/Restaurant/RestaurantFood">
+            <li id="dash_dashboard">
               <a className="waves-effect" href="">
                 <b>Food</b>
               </a>
             </li>
+            </NavLink>
             <li id="dash_dashboard">
               <a className="waves-effect" href="">
                 <b>Order</b>
               </a>
             </li>
             <NavLink to="/Restaurant/orderHistory">
-            <li id="dash_dashboard">
+            <li id="dash_dashboard"  className="active red lighten-5">
               <a className="waves-effect" href="">
                 <b>Order History</b>
               </a>
@@ -88,18 +90,15 @@ export default class RestaurantFood extends Component {
         </div>
 
         <div className="col s12 l10" style={{ paddingTop: 10 }}>
-          <a
-            className="center-align waves-effect waves-light btn indigo modal-trigger"
-            href="#modaladd"
-          >
-            Add Food
-          </a>
           <table>
             <thead>
               <tr>
-                <th>Food Name</th>
-                <th>Item Name</th>
-                <th>Item Price</th>
+                <th>Customer Name</th>
+                <th>Customer PhoneNo</th>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -108,18 +107,21 @@ export default class RestaurantFood extends Component {
               <tr>
                 <td>Alvin</td>
                 <td>Eclair</td>
+                <td>Eclair</td>
+                <td>3</td>
                 <td>$0.87</td>
+                <td>$2.75</td>
                 <td>
                   {" "}
                   <a
                     className="btn-floating btn-small waves-effect waves-light red modal-trigger"
-                    href="#modaldelete"
+                    href="#historymodaldelete"
                   >
                     <i className="material-icons">delete_forever</i>
                   </a>{" "}
                   <a
                     className="btn-floating btn-small waves-effect waves-light amber accent-4 modal-trigger"
-                    href="#modaledit"
+                    href="#historymodaledit"
                   >
                     <i className="material-icons">edit</i>
                   </a>
@@ -128,13 +130,18 @@ export default class RestaurantFood extends Component {
               <tr>
                 <td>Alan</td>
                 <td>Jellybean</td>
+                <td>Eclair</td>
+                <td>3</td>
+                <td>$0.87</td>
                 <td>$3.76</td>
                 <td>
                   {" "}
-                  <a className="btn-floating btn-small waves-effect waves-light red">
+                  <a className="btn-floating btn-small waves-effect waves-light red modal-trigger"
+                    href="#historymodaldelete">
                     <i className="material-icons">delete_forever</i>
                   </a>{" "}
-                  <a className="btn-floating btn-small waves-effect waves-light amber accent-4">
+                  <a className="btn-floating btn-small waves-effect waves-light amber accent-4 modal-trigger"
+                    href="#historymodaledit">
                     <i className="material-icons">edit</i>
                   </a>
                 </td>
@@ -142,13 +149,18 @@ export default class RestaurantFood extends Component {
               <tr>
                 <td>Jonathan</td>
                 <td>Lollipop</td>
+                <td>Eclair</td>
+                <td>3</td>
+                <td>$0.87</td>
                 <td>$7.00</td>
                 <td>
                   {" "}
-                  <a className="btn-floating btn-small waves-effect waves-light red">
+                  <a className="btn-floating btn-small waves-effect waves-light red modal-trigger"
+                    href="#historymodaldelete">
                     <i className="material-icons">delete_forever</i>
                   </a>{" "}
-                  <a className="btn-floating btn-small waves-effect waves-light amber accent-4">
+                  <a className="btn-floating btn-small waves-effect waves-light amber accent-4 modal-trigger"
+                    href="#historymodaledit">
                     <i className="material-icons">edit</i>
                   </a>
                 </td>
@@ -157,10 +169,9 @@ export default class RestaurantFood extends Component {
           </table>
         </div>
 
-        <div id="modaladd" className="modal">
+        <div id="historymodaledit" className="modal">
           <div className="modal-content">
-            <p>book table at "restaurant name"</p>
-            <p>Add Food</p>
+            <p>Edit Food order info</p>
             <div className="row">
               <div className="input-field col s6">
                 <input id="food_name" type="text" className="validate" />
@@ -172,63 +183,11 @@ export default class RestaurantFood extends Component {
               </div>
               <div className="input-field col s6">
                 <input type="text" className="validate" />
-                <label htmlFor="food_type">Food Type</label>
+                <label htmlFor="foord_description">Food quantity</label>
               </div>
               <div className="input-field col s6">
                 <input type="text" className="validate" />
-                <label htmlFor="foord_description">Food Description</label>
-              </div>
-              <div class="file-field input-field">
-                <div class="btn">
-                  <span>File</span>
-                  <input type="file" />
-                </div>
-                <div class="file-path-wrapper">
-                  <input class="file-path validate" type="text" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="modal-footer">
-            <a
-              href="#!"
-              className="modal-close waves-effect waves-green btn-flat"
-            >
-              Add
-            </a>
-          </div>
-        </div>
-
-        <div id="modaledit" className="modal">
-          <div className="modal-content">
-            <p>book table at "restaurant name"</p>
-            <p>Edit Food</p>
-            <div className="row">
-              <div className="input-field col s6">
-                <input id="food_name" type="text" className="validate" />
-                <label htmlFor="food_name">Food Name</label>
-              </div>
-              <div className="input-field col s6">
-                <input type="text" className="validate" />
-                <label htmlFor="food_price">Food Price</label>
-              </div>
-              <div className="input-field col s6">
-                <input type="text" className="validate" />
-                <label htmlFor="food_type">Food Type</label>
-              </div>
-              <div className="input-field col s6">
-                <input type="text" className="validate" />
-                <label htmlFor="foord_description">Food Description</label>
-              </div>
-
-              <div class="file-field input-field">
-                <div class="btn">
-                  <span>File</span>
-                  <input type="file" />
-                </div>
-                <div class="file-path-wrapper">
-                  <input class="file-path validate" type="text" />
-                </div>
+                <label htmlFor="foord_description">Total Price</label>
               </div>
             </div>
           </div>
@@ -242,9 +201,9 @@ export default class RestaurantFood extends Component {
           </div>
         </div>
 
-        <div id="modaldelete" className="modal">
+        <div id="historymodaldelete" className="modal">
           <div className="modal-content">
-            <h5>delete this??</h5>
+            <h5>delete this order??</h5>
           </div>
           <div className="modal-footer">
             <a

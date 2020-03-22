@@ -72,6 +72,13 @@ export default function RestaurantDashboard() {
             <b>Order</b>
           </a>
         </li>
+        <NavLink to="/Restaurant/orderHistory">
+            <li id="dash_dashboard">
+              <a className="waves-effect" href="">
+                <b>Order History</b>
+              </a>
+            </li>
+            </NavLink>
       </ul>
 
  
