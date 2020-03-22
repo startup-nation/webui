@@ -56,73 +56,33 @@ export default class RestaurantFood extends Component {
               </div>
             </li>
             <NavLink to="/Restaurant/RestaurantDashboard">
-              <li id="dash_dashboard" className="red lighten-5">
+              <li id="dash_dashboard">
                 <a className="waves-effect" href="">
-                  <i className="material-icons" style={{ padding: "20px" }}>
-                    dashboard
-                  </i>
+                 
                   <b>Dashboard</b>
                 </a>
               </li>
             </NavLink>
             <li id="dash_dashboard">
               <a className="waves-effect" href="">
-                <i className="material-icons" style={{ padding: "20px" }}>
-                  restaurant
-                </i>
+                
                 <b>Table</b>
               </a>
             </li>
             <li id="dash_dashboard" className="active red lighten-5">
               <a className="waves-effect" href="">
-                <i className="material-icons" style={{ padding: "20px" }}>
-                  account_box
-                </i>
+               
                 <b>Food</b>
               </a>
             </li>
             <li id="dash_dashboard">
               <a className="waves-effect" href="">
-                <i className="material-icons" style={{ padding: "20px" }}>
-                  account_box
-                </i>
+               
                 <b>Order</b>
               </a>
             </li>
 
-            <ul className="collapsible" data-collapsible="accordion">
-              <li id="dash_categories">
-                <div
-                  id="dash_categories_header"
-                  className="collapsible-header waves-effect"
-                >
-                  <b>Array</b>
-                  <i className="right material-icons">keyboard_arrow_down</i>
-                </div>
-                <div id="dash_categories_body" className="collapsible-body">
-                  <ul>
-                    <li id="categories_category">
-                      <a
-                        className="waves-effect"
-                        style={{ textDecoration: "none" }}
-                        href=""
-                      >
-                        One Dimensional Array
-                      </a>
-                    </li>
-                    <li id="categories_sub_category">
-                      <a
-                        className="waves-effect"
-                        style={{ textDecoration: "none" }}
-                        href=""
-                      >
-                        Two Dimenstional Array
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
+     
           </ul>
         </div>
 
