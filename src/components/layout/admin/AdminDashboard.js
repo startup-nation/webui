@@ -2,10 +2,35 @@ import React from "react";
 import Header from "../common/Header";
 import search from "../../img/loupe.png";
 import prism from "../../css/prism.css";
+import { NavLink } from "react-router-dom";
 
 export default function AdminDashboard() {
   return (
     <div className="row">
+            <header>
+        <nav className="red darken-3 z-depth-1" role="navigation">
+          <div className="nav-wrapper">
+            <ul className="right hide-on-med-and-down">
+              <li>
+                <a href="" className="toggle-fullscreen">
+                  <i className="material-icons">account_circle</i>
+                </a>
+              </li>
+            </ul>
+            <a
+              data-activates="slide-out"
+              className="button-collapse show-on-"
+              href="#!"
+            >
+              <i className="material-icons">menu</i>
+            </a>
+            <a href="#" data-activates="slide-out" className="button-collapse">
+              <i className="mdi-navigation-menu"></i>
+            </a>
+          </div>
+        </nav>
+      </header>
+      <div className="col s12 l2">
       <ul id="slide-out" className="side-nav fixed z-depth-2">
         <li className="center no-padding">
           <div
@@ -25,30 +50,26 @@ export default function AdminDashboard() {
 
         <li id="dash_dashboard" className="active  red lighten-5">
           <a className="waves-effect" href="">
-            <i className="material-icons" style={{ padding: "20px" }}>
-              dashboard
-            </i>
+        
             <b>Dashboard</b>
           </a>
         </li>
+        <NavLink to="/admin/restaurantList">
         <li id="dash_dashboard">
           <a className="waves-effect" href="">
-            <i className="material-icons" style={{ padding: "20px" }}>
-              restaurant
-            </i>
+           
             <b>Restaurant</b>
           </a>
         </li>
+        </NavLink>
         <li id="dash_dashboard">
           <a className="waves-effect" href="">
-            <i className="material-icons" style={{ padding: "20px" }}>
-              account_box
-            </i>
+           
             <b>User</b>
           </a>
         </li>
 
-        <ul className="collapsible" data-collapsible="accordion">
+        {/* <ul className="collapsible" data-collapsible="accordion">
           <li id="dash_categories">
             <div
               id="dash_categories_header"
@@ -80,36 +101,12 @@ export default function AdminDashboard() {
               </ul>
             </div>
           </li>
-        </ul>
+        </ul> */}
       </ul>
-
-      <header>
-        <nav className="red darken-3 z-depth-1" role="navigation">
-          <div className="nav-wrapper">
-            <ul className="right hide-on-med-and-down">
-              <li>
-                <a href="" className="toggle-fullscreen">
-                  <i className="material-icons">account_circle</i>
-                </a>
-              </li>
-            </ul>
-            <a
-              data-activates="slide-out"
-              className="button-collapse show-on-"
-              href="#!"
-            >
-              <i className="material-icons">menu</i>
-            </a>
-            <a href="#" data-activates="slide-out" className="button-collapse">
-              <i className="mdi-navigation-menu"></i>
-            </a>
-          </div>
-        </nav>
-      </header>
-
-      <div className="row" style={{ padding: "10px" }}>
+      </div>
 
 
+      <div className="col s12 l10" style={{ padding: "10px" }}>
         <div className="col s12 l4">
           <div className="card hoverable gradient-45deg-purple-deep-orange gradient-shadow">
             <div className="card-content">
