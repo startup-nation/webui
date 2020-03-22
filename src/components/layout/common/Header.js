@@ -5,7 +5,9 @@ import Signin from "../auth/Signin";
 import Signup from "../auth/Signup";
 import Admin from "../admin/AdminLogin";
 import $ from "jquery";
-export default function Header() {
+import materialize from "materialize-css";
+export default class Header extends Component {
+  render(){
   return (
     <div>
       <header>
@@ -45,16 +47,44 @@ export default function Header() {
                 </li>
 
                 <li>
-                  <NavLink
-                    exact
-                    className="white-text text-darken-3"
-                    to="/admin"
+                <a
+                    className="dropdown-trigger white-text text-darken-4"
+                    href="#"
+                    data-target="dropdown1"
                   >
                     <i className="material-icons left white-text text-darken-2">
-                      accessibility
+                      arrow_drop_down
                     </i>
-                    Admin
-                  </NavLink>
+                    profile
+                  </a>
+
+                  <ul id="dropdown1" className="dropdown-content">
+                  <li>
+                      <NavLink exact className="grey-text text-darken-3" to="/userProfile">
+                       
+                        Profile
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        exact
+                        className="grey-text text-darken-3"
+                        to="/myOrder"
+                      >
+                        
+                        My Orders
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        exact
+                        className="grey-text text-darken-3"
+                        to="/signup"
+                      >
+                        Signout
+                      </NavLink>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </div>
@@ -90,4 +120,5 @@ export default function Header() {
       </Switch>
     </div>
   );
+}
 }

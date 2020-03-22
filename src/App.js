@@ -16,6 +16,7 @@ import RestaurantFood from "./components/layout/restaurant/RestaurantFood";
 import RestaurantList from "./components/layout/admin/RestaurantList";
 import UserList from "./components/layout/admin/UserList";
 import OrderHistory from "./components/layout/restaurant/OrderHistory";
+import MyOrder from "./components/layout/user/MyOrder";
 function App() {
   return (
     <div className="App">
@@ -24,6 +25,8 @@ function App() {
       <Route exact path="/signin" component={Signin} />
       <Route exact path="/signup" component={Signup} />
       <Route exact path="/userProfile" component={UserProfile} />
+      <Route exact path="/myOrder" component={MyOrder} />
+
       <Route exact path="/restaurants/food" component={Food} />
       <Route exact path="/restaurants" component={Restaurants} />
       
