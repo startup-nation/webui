@@ -62,13 +62,14 @@ export default function AdminDashboard() {
           </a>
         </li>
         </NavLink>
+         <NavLink to="/admin/userList">
         <li id="dash_dashboard">
           <a className="waves-effect" href="">
            
             <b>User</b>
           </a>
         </li>
-
+        </NavLink>
         {/* <ul className="collapsible" data-collapsible="accordion">
           <li id="dash_categories">
             <div

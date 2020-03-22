@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import M from "materialize-css";
 import $ from "jquery";
-export default class RestaurantList extends Component {
+export default class UserList extends Component {
   componentDidMount() {
     document.addEventListener("DOMContentLoaded", function() {
       var elems = document.querySelectorAll(".modal");
@@ -41,53 +41,54 @@ export default class RestaurantList extends Component {
           </nav>
         </header>
         <div className="col s12 l2">
-          <ul id="slide-out" className="side-nav fixed z-depth-2">
-            <li className="center no-padding">
-              <div
-                className=" red darken-3  white-text"
-                style={{ height: "180px" }}
-              >
-                <div className="row">
-                  <i
-                    className="devicon-coffeescript-original"
-                    style={{ fontSize: "100px" }}
-                  ></i>
-                  <h4 style={{ marginTop: "-8%" }}>ADMIN</h4>
-                  <h6>Book My Meal</h6>
-                </div>
-              </div>
-            </li>
-            <NavLink to="/admin/dashboard">
-              <li id="dash_dashboard">
-                <a className="waves-effect" href="">
-                  <b>Dashboard</b>
-                </a>
-              </li>
-            </NavLink>
-            <NavLink to="/admin/restaurantList">
-              <li id="dash_dashboard" className="active  red lighten-5">
-                <a className="waves-effect" href="">
-                  <b>Restaurant</b>
-                </a>
-              </li>
-            </NavLink>
-            <NavLink to="/admin/userList">
-              <li id="dash_dashboard">
-                <a className="waves-effect" href="">
-                  <b>User</b>
-                </a>
-              </li>
-            </NavLink>
-          </ul>
-        </div>
+      <ul id="slide-out" className="side-nav fixed z-depth-2">
+        <li className="center no-padding">
+          <div
+            className=" red darken-3  white-text"
+            style={{ height: "180px" }}
+          >
+            <div className="row">
+              <i
+                className="devicon-coffeescript-original"
+                style={{ fontSize: "100px" }}
+              ></i>
+              <h4 style={{ marginTop: "-8%" }}>ADMIN</h4>
+              <h6>Book My Meal</h6>
+            </div>
+          </div>
+        </li>
+        <NavLink to="/admin/dashboard">
+        <li id="dash_dashboard">
+          <a className="waves-effect" href="">
+            
+            <b>Dashboard</b>
+          </a>
+        </li>
+        </NavLink>
+        <NavLink to="/admin/restaurantList">
+        <li id="dash_dashboard"  >
+          <a className="waves-effect" href="">
+            
+            <b>Restaurant</b>
+          </a>
+        </li>
+        </NavLink>
+        <li id="dash_dashboard" className="active  red lighten-5">
+          <a className="waves-effect" href="">
+            
+            <b>User</b>
+          </a>
+        </li>
+      </ul>
+      </div>
 
         <div className="col s12 l10" style={{ paddingTop: 10 }}>
           <table>
             <thead>
               <tr>
-                <th>Restaurant Name</th>
-                <th>Restaurant Location </th>
-                <th>Restaurant Phoneno</th>
+                <th>User Name</th>
+                <th>User Location </th>
+                <th>User Phoneno</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -101,20 +102,19 @@ export default class RestaurantList extends Component {
                   {" "}
                   <a
                     className="btn-floating btn-small waves-effect waves-light red modal-trigger"
-                    href="#modaldelete"
+                    href="#usermodaldelete"
                   >
                     <i className="material-icons">delete_forever</i>
                   </a>{" "}
                   <a
                     className="btn-floating btn-small waves-effect waves-light amber accent-4 modal-trigger"
-                    href="#modaledit"
+                    href="#usermodaledit"
                   >
                     <i className="material-icons">edit</i>
-                  </a>{" "}
-                  <a
-                    className="btn-floating btn-small waves-effect waves-light indigo accent-4 modal-trigger"
-                    href="#modalmsg"
-                  >
+                  </a>
+                  {" "}
+                  <a className="btn-floating btn-small waves-effect waves-light indigo accent-4 modal-trigger"
+            href="#usermodalmsg">
                     <i className="material-icons">message</i>
                   </a>
                 </td>
@@ -125,16 +125,17 @@ export default class RestaurantList extends Component {
                 <td>01788459537</td>
                 <td>
                   {" "}
-                  <a className="btn-floating btn-small waves-effect waves-light red">
+                  <a className="btn-floating btn-small waves-effect waves-light red modal-trigger"
+                    href="#usermodaldelete">
                     <i className="material-icons">delete_forever</i>
                   </a>{" "}
-                  <a className="btn-floating btn-small waves-effect waves-light amber accent-4">
+                  <a className="btn-floating btn-small waves-effect waves-light amber accent-4 modal-trigger"
+                    href="#usermodaledit">
                     <i className="material-icons">edit</i>
-                  </a>{" "}
-                  <a
-                    className="btn-floating btn-small waves-effect waves-light indigo accent-4 modal-trigger"
-                    href="#modalmsg"
-                  >
+                  </a>
+                  {" "}
+                  <a className="btn-floating btn-small waves-effect waves-light indigo accent-4 modal-trigger"
+            href="#usermodalmsg">
                     <i className="material-icons">message</i>
                   </a>
                 </td>
@@ -145,16 +146,17 @@ export default class RestaurantList extends Component {
                 <td>01788406593</td>
                 <td>
                   {" "}
-                  <a className="btn-floating btn-small waves-effect waves-light red">
+                  <a className="btn-floating btn-small waves-effect waves-light red modal-trigger"
+                    href="#usermodaldelete">
                     <i className="material-icons">delete_forever</i>
                   </a>{" "}
-                  <a className="btn-floating btn-small waves-effect waves-light amber accent-4">
+                  <a className="btn-floating btn-small waves-effect waves-light amber accent-4 modal-trigger"
+                    href="#usermodaledit">
                     <i className="material-icons">edit</i>
-                  </a>{" "}
-                  <a
-                    className="btn-floating btn-small waves-effect waves-light indigo accent-4 modal-trigger"
-                    href="#modalmsg"
-                  >
+                  </a>
+                  {" "}
+                  <a className="btn-floating btn-small waves-effect waves-light indigo accent-4 modal-trigger"
+            href="#usermodalmsg">
                     <i className="material-icons">message</i>
                   </a>
                 </td>
@@ -163,23 +165,19 @@ export default class RestaurantList extends Component {
           </table>
         </div>
 
-        <div id="modalmsg" className="modal">
+        <div id="usermodalmsg" className="modal">
           <div className="modal-content">
-            <p>SENT A MESSAGE TO "restaurant name"</p>
-
+            <p>SENT A MESSAGE TO "user name"</p>
+           
             <div className="row">
               <div className="input-field col s6">
                 <input id="food_name" type="text" className="validate" />
                 <label htmlFor="food_name">Subject</label>
               </div>
               <div class="input-field col s6">
-                <textarea
-                  id="textarea2"
-                  class="materialize-textarea"
-                  data-length="120"
-                ></textarea>
+                <textarea id="textarea2" class="materialize-textarea" data-length="120"></textarea>
                 <label for="textarea2">Textarea</label>
-              </div>
+                </div>
               <div class="file-field input-field col s12">
                 <div class="btn">
                   <span>File</span>
@@ -201,26 +199,26 @@ export default class RestaurantList extends Component {
           </div>
         </div>
 
-        <div id="modaledit" className="modal">
+        <div id="usermodaledit" className="modal">
           <div className="modal-content">
-            <p>edit "restaurant name"</p>
-
+            <p>edit "user name"</p>
+            
             <div className="row">
               <div className="input-field col s6">
                 <input id="food_name" type="text" className="validate" />
-                <label htmlFor="food_name">Restaurant Name</label>
+                <label htmlFor="food_name">User Name</label>
               </div>
               <div className="input-field col s6">
                 <input type="text" className="validate" />
-                <label htmlFor="food_price">Restaurant Location </label>
+                <label htmlFor="food_price">User Location </label>
               </div>
               <div className="input-field col s6">
                 <input type="text" className="validate" />
-                <label htmlFor="food_type">Restaurant PhoneNo</label>
+                <label htmlFor="food_type">User PhoneNo</label>
               </div>
               <div className="input-field col s6">
                 <input type="text" className="validate" />
-                <label htmlFor="foord_description">Restaurant Email</label>
+                <label htmlFor="foord_description">User Email</label>
               </div>
 
               <div class="file-field input-field col s12">
@@ -244,9 +242,9 @@ export default class RestaurantList extends Component {
           </div>
         </div>
 
-        <div id="modaldelete" className="modal">
+        <div id="usermodaldelete" className="modal">
           <div className="modal-content">
-            <h5>delete this??</h5>
+            <h5>delete this user??</h5>
           </div>
           <div className="modal-footer">
             <a
