@@ -178,7 +178,9 @@ export default class RestaurantFood extends Component {
                 <input type="text" className="validate" />
                 <label htmlFor="foord_description">Food Description</label>
               </div>
-              <div class="file-field input-field">
+            
+            </div>
+            <div class="file-field input-field">
                 <div class="btn">
                   <span>File</span>
                   <input type="file" />
@@ -187,7 +189,6 @@ export default class RestaurantFood extends Component {
                   <input class="file-path validate" type="text" />
                 </div>
               </div>
-            </div>
           </div>
           <div className="modal-footer">
             <a
@@ -221,7 +222,9 @@ export default class RestaurantFood extends Component {
                 <label htmlFor="foord_description">Food Description</label>
               </div>
 
-              <div class="file-field input-field">
+            
+            </div>
+            <div class="file-field input-field">
                 <div class="btn">
                   <span>File</span>
                   <input type="file" />
@@ -230,7 +233,6 @@ export default class RestaurantFood extends Component {
                   <input class="file-path validate" type="text" />
                 </div>
               </div>
-            </div>
           </div>
           <div className="modal-footer">
             <a
